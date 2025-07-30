@@ -3,6 +3,8 @@ const BASE_URL = process.env.BASE_URL;
 const path = require('path');
 const fs = require('fs');
 
+const BASE_URL = process.env.BASE_URL || 'https://blog-backend-wy92.onrender.com/';
+
 const getAllBlogs = (req, resp) => {
     connection.query('SELECT * FROM tbl_blog', (err, results) => {
         if (err) return resp.status(500).json({ status: false, message: err.message });
