@@ -13,10 +13,10 @@ const connection = mysql.createConnection({
     password: 'AVNS_EX0iATLYqmjikFoOxRC',
     database: 'defaultdb',
     port: 12023,
-    ssl: {
-    rejectUnauthorized: true,
-    ca: fs.readFileSync(path.join(__dirname, '../certs/ca.pem'))
-  }
+  //   ssl: {
+  //   rejectUnauthorized: true,
+  //   ca: fs.readFileSync(path.join(__dirname, '../certs/ca.pem'))
+  // }
 });
 
 connection.connect(function (err){
