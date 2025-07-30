@@ -8,14 +8,14 @@ const connection = mysql.createConnection({
     // password: process.env.DB_PASSWORD,
     // database: process.env.DB_DATABASE,
     // port: process.env.DB_PORT,
-    host: mysql-3f928502-munjanijay421-29a8.j.aivencloud.com,
-    user: avnadmin,
-    password: AVNS_EX0iATLYqmjikFoOxRC,
-    database: defaultdb,
+    host: 'mysql-3f928502-munjanijay421-29a8.j.aivencloud.com',
+    user: 'avnadmin',
+    password: 'AVNS_EX0iATLYqmjikFoOxRC',
+    database: 'defaultdb',
     port: 12023,
     ssl: {
     rejectUnauthorized: true,
-    ca: fs.readFileSync('C:\Users\DREAMWORLD\Downloads\ca.pem'),
+    ca: fs.readFileSync(path.join(__dirname, '../certs/ca.pem'))
   }
 });
 
