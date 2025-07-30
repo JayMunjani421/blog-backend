@@ -13,6 +13,10 @@ const connection = mysql.createConnection({
     password: AVNS_EX0iATLYqmjikFoOxRC,
     database: defaultdb,
     port: 12023,
+    ssl: {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync('C:\Users\DREAMWORLD\Downloads\ca.pem'),
+  }
 });
 
 connection.connect(function (err){
