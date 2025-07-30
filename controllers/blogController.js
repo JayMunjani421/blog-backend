@@ -84,7 +84,7 @@ const updateBlog = async (req, resp) => {
             // If new file is uploaded
             if (req.file) {
                 const filename = req.file.filename;
-                updatedMediaUrl = `${process.env.BASE_URL}uploads/${filename}`;
+                updatedMediaUrl = `${BASE_URL}uploads/${filename}`;
 
                 // Delete the old file from the uploads folder
                 const oldFilePath = path.join(__dirname, '../uploads/', path.basename(oldMediaUrl));
